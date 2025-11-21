@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+    </script>
+    <style>
+        #mapa { height: 400px; }
+        #mapa2 {height: 400px}
+    </style>
+
+</head>
+<body>
+    <h1>localización actual</h1>
+    <p id="actual"></p>
+    <h1>localización que se actualiza</h1>
+    <p id="actualizar"></p>
+    <br>
+    <br>
+    <div id="mapa"></div>
+    <br>
+    <h1>con accuracy</h1>
+    <p id="accuracy"></p>
+    <br>
+    <h1>distancia entre 2 ubicaciones</h1>
+    <p id="resultado"></p>
+    <br>
+    <h1>mapa con el circulo</h1>
+    <div id="mapa2"></div>
+    <script src="ejercicios.js"></script>
+</body>
+</html>

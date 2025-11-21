@@ -1,0 +1,30 @@
+body{
+    background-color: orange;
+    text-align: center;
+    height: 400px;
+    font-size: 50px;
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+button{
+    background-color: orange;
+    color: white;
+    border: 1px solid white;
+    width: 10%;
+    height: 8%;
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: black;
+}
+
+div#tiempo{
+    color: white;
+    font-size: 30px;
+}

@@ -1,0 +1,39 @@
+/* Reset y tipografía */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+
+/* Contenedor de imágenes como grid */
+#imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
+    gap: 20px;
+}
+
+/* Estilos base para los cuadrados */
+#imagenes div {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+
+/* Efecto hover simple */
+#imagenes div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}

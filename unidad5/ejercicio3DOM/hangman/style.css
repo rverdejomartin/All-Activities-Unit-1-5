@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(115, 242, 115);
+    color: white;
+    text-align: center;
+}
+
+#letras{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button{
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+}
+
+button#reset{
+    background-color: pink;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 30%;
+}
