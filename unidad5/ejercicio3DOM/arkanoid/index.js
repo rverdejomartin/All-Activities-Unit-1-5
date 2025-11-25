@@ -107,23 +107,23 @@ function bouncingOfTheBall(game_view){
         let paddleRect = paddle.getBoundingClientRect();
 
         //coord x
-        if(ballRect.left <= gameRect.left){
+        if(ballRect.left+1 <= gameRect.left){
             speedX *= -1;
         } else if(ballRect.right >= gameRect.right){
             speedX *= -1;
         }
 
         //coord y
-        if(ballRect.top <= gameRect.top){
+        if(ballRect.top+1 <= gameRect.top){
             speedY *= -1;
         } else if(
-            ballRect.bottom >= paddleRect.top &&
-            ballRect.right > paddleRect.left && 
-            ballRect.left < paddleRect.right
+            ballRect.bottom+1 >= paddleRect.top &&
+            ballRect.right+1 > paddleRect.left && 
+            ballRect.left+1 < paddleRect.right
         )
         {
             speedY *= -1;
-        } else if(ballRect.bottom >= gameRect.bottom){
+        } else if(ballRect.bottom+1 >= gameRect.bottom){
             endGame();
         }
 
