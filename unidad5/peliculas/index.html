@@ -8,9 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="general">
-
+    <div id="landing-page">
+        <h1>Web buscadora de películas</h1>
+        <h3>Funcionamiento principal de la web</h3>
+        <ul>
+            <li>Esta web implementa la obtención de datos mediante una petición.</li>
+            <li>Se obtendran dichos datos de una API.</li>
+            <li>Dispone de 4 elementos, el input de busqueda de nombre, el de año, para buscar, y un desplegable para señalar el tipo de busqueda, pelicula o serie.</li>
+            <li>Se podrá hacer click sobre la imagen de cualquier película para poder ver información sobre cierta película.</li>
+        </ul>
+        <button id="empezar">Empezar</button>
     </div>
-    <button id="btnCargar">Cargar mas</button>
+    <div id="general">
+        
+    </div>
+    <div id="btnBuscar">
+        <select name="categoria" id="categoia">
+            <option value="serie">Serie</option>
+            <option value="pelicula">Pelicula</option>
+        </select><input type="text" placeholder="Harry Potter..." id="input"><input type="text" id="inputAnio" placeholder="1999"><button id="addName">Buscar</button>
+    </div>
 </body>
 </html>
