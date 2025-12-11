@@ -1,6 +1,5 @@
 body{
-    background-color: powderblue;
-    margin: 0;
+    background-color: #1a1a2e;
 }
 
 #general{
@@ -9,15 +8,29 @@ body{
     gap: 20px;
     visibility: hidden;
     justify-content: center;
+    color: white;
+    padding: 20px;
 }
 
 #general > div{
-    width: 300px;
+    min-width: 280px;
+    flex-grow: 1;
+    position: relative;
+    padding-top: 25px;
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
 }
 
-#general > div img{
-    width: 100%;
+#general img{
+    width: auto;
     height: auto;
+    max-width: 100%;
+    max-height: 375px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 0 3px magenta;
+    border: none;
 }
 
 #btnBuscar{
@@ -30,7 +43,23 @@ body{
     visibility: hidden;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    background-color: #1a1a2e;
+    padding: 10px 20px;
+    width: auto;
+    max-width: 90%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    justify-content: space-between;
+}
+
+#btnBuscar #verFavoritas, #btnBuscar #addName{
+    border-radius: 8px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px white;
+    background-color: magenta;
+    color: white;
 }
 
 #general.opaco{
@@ -63,9 +92,172 @@ body{
     z-index: 1001;
 }
 
-.detalle-pelicula img {
+.detalle-pelicula img{
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto 15px;
+}
+
+#landing-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#favoritas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    visibility: hidden;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+#favoritas h2{
+    width: 100%;
+    text-align: center;
+}
+
+#favoritas > div{
+    min-width: 280px;
+    flex-grow: 1;
+    position: relative;
+    padding-top: 25px;
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+#favoritas img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 375px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 0 3px magenta;
+    border: none;
+}
+
+#favoritas.opaco{
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+#btnVolverBusqueda{
+    visibility: hidden;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    box-shadow: 1px 1px 1px 1px white;
+    z-index: 999;
+}
+
+#general .favorito, #favoritas .favorito{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+
+
+@media (max-width: 1024px){
+    #general > div, #favoritas > div {
+        min-width: 200px;
+    }
+
+    #general img, #favoritas img{
+        max-height: 300px;
+    }
+
+    #btnBuscar{
+        padding: 8px 15px;
+        gap: 8px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 768px){
+    #general > div, #favoritas > div {
+        min-width: 40%;
+        flex-basis: 40%;
+        padding-top: 15px;
+        gap: 10px;
+    }
+
+    #general img, #favoritas img{
+        max-height: 300px;
+    }
+
+    #btnBuscar{
+        max-width: 95%;
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 5px 10px;
+        gap: 5px;
+    }
+
+    #input, #inputAnio, #addName{
+        flex-basis: 45%;
+        min-width: 120px;
+        margin-top: 5px;
+    }
+
+    #verFavoritas, #btnVolverBusqueda {
+        padding: 5px 10px;
+        font-size: 14px;
+        top: 70px;
+    }
+}
+
+@media (max-width: 480px){
+    #general > div, #favoritas > div {
+        min-width: 200px;
+        flex-basis: 95%;
+    }
+
+    #general img, #favoritas img{
+        max-height: 300px;
+    }
+
+    #general > div p, #favoritas > div p{
+        text-align: center;
+    }
+
+    #btnBuscar {
+        width: 100vw; 
+        left: 0;
+        transform: none; 
+        padding: 5px; 
+        border-radius: 0; 
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    #input, #inputAnio, #addName {
+        flex-basis: auto; 
+        width: 100%;
+        min-width: auto;
+        margin-top: 3px;
+        box-sizing: border-box; 
+    }
+
+    #verFavoritas, #btnVolverBusqueda {
+        top: 140px;
+    }
 }
