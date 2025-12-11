@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "peliculas",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

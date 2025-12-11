@@ -170,7 +170,7 @@ function peticionDetalle(id){
     contenedor.classList.add("opaco");
     contenedorFavoritas.classList.add("opaco");
     document.body.classList.add("estatico");
-    let url = "http://www.omdbapi.com/?i=" + id + "&apikey=c0f0795e&plot=full"
+    let url = "https://www.omdbapi.com/?i=" + id + "&apikey=c0f0795e&plot=full"
     fetch(url).then(response => response.json())
     .then(data =>{
         maquetacionClick(data);
@@ -293,7 +293,7 @@ function cambiarPage(){
 }
 
 function construirUrl(){
-    let url = "http://www.omdbapi.com/?s="+nombre+"&apikey=c0f0795e&page="+cont;
+    let url = "https://www.omdbapi.com/?s="+nombre+"&apikey=c0f0795e&page="+cont;
 
     if (anio) {
         url += "&y=" + anio;
